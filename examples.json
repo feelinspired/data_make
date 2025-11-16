@@ -1,0 +1,98 @@
+{
+  "description": "Example mapping scenarios for Data Whisperer",
+  "examples": [
+    {
+      "name": "E-commerce Customer Integration",
+      "description": "Map customer data from e-commerce platform to CRM",
+      "source": {
+        "order_id": "ORD-2024-12345",
+        "customer_info": {
+          "customer_id": "CUST-98765",
+          "first_name": "Jane",
+          "last_name": "Smith",
+          "email_address": "jane.smith@example.com",
+          "phone_number": "+1-555-0199"
+        },
+        "shipping_address": {
+          "street_line1": "456 Oak Avenue",
+          "city_name": "Portland",
+          "state_code": "OR",
+          "postal_code": "97201",
+          "country_code": "US"
+        },
+        "order_total": "249.99",
+        "order_date": "2024-11-15T14:30:00Z"
+      },
+      "target": {
+        "orderId": "",
+        "customerId": "",
+        "customerName": "",
+        "email": "",
+        "phone": "",
+        "address": {
+          "street": "",
+          "city": "",
+          "state": "",
+          "zip": "",
+          "country": ""
+        },
+        "totalAmount": 0.0,
+        "purchaseDate": ""
+      }
+    },
+    {
+      "name": "User Profile Sync",
+      "description": "Sync user profiles between authentication service and app database",
+      "source": {
+        "user_uuid": "550e8400-e29b-41d4-a716-446655440000",
+        "username": "johndoe123",
+        "display_name": "John Doe",
+        "email_verified": true,
+        "account_created": "2024-01-10T09:15:00Z",
+        "last_login": "2024-11-16T08:30:00Z",
+        "profile_data": {
+          "avatar_url": "https://example.com/avatar.jpg",
+          "bio_text": "Software developer",
+          "location_string": "San Francisco, CA"
+        }
+      },
+      "target": {
+        "id": "",
+        "name": "",
+        "email": "",
+        "verified": false,
+        "createdAt": "",
+        "lastActive": "",
+        "profile": {
+          "avatar": "",
+          "bio": "",
+          "location": ""
+        }
+      }
+    },
+    {
+      "name": "Payment Gateway Integration",
+      "description": "Transform payment data from gateway to accounting system",
+      "source": {
+        "transaction_id": "TXN-2024-ABC123",
+        "payment_method": "credit_card",
+        "card_last_four": "4242",
+        "amount_cents": 12999,
+        "currency_code": "USD",
+        "customer_email": "buyer@example.com",
+        "status": "COMPLETED",
+        "processed_at": "2024-11-16T10:45:00Z"
+      },
+      "target": {
+        "transactionReference": "",
+        "paymentType": "",
+        "cardNumber": "",
+        "amount": 0.0,
+        "currency": "",
+        "customerEmail": "",
+        "paymentStatus": "",
+        "timestamp": ""
+      }
+    }
+  ]
+}
